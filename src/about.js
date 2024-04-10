@@ -1,5 +1,9 @@
 const about = {
-    load: function () {
+    load: function (navAbout, nav) {
+        nav.forEach((element) => {
+            element.classList.remove('tab-active');
+        })
+        navAbout.classList.add('tab-active');
         const content = document.querySelector('#content');
         content.innerHTML = '';
         const introduction = document.createElement('p');
